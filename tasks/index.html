@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Jose Sagaz" name="author"/>
+<link href="https://josesagaz.github.io/tasks/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Utic</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<script defer="" src="../js/jquery-1.10.2.min.js"></script>
+<script defer="" src="../js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/html.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/css.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="..">UTIC❖{desarrollo}</a>
+<!-- Expander button -->
+<button class="navbar-toggler" data-target="#navbar-collapse" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="navitem">
+<a class="nav-link" href="..">Inicio</a>
+</li>
+<li class="navitem">
+<a class="nav-link" href="../about/">About</a>
+</li>
+<li class="navitem">
+<a class="nav-link" href="../desarrollo/">Dev</a>
+</li>
+<li class="navitem active">
+<a class="nav-link" href="./">Tareas</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" data-target="#mkdocs_search_modal" data-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../desarrollo/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link disabled" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-target="#toc-collapse" data-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-level="1"><a class="nav-link" href="#tareas-en-curso">Tareas en curso</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#web-site-bandera">WEB Site (bandera)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item" data-level="1"><a class="nav-link" href="#diagrama-graph-lr">Diagrama Graph LR</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#ejemplo">Ejemplo</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#diagrama-secuencial">Diagrama secuencial</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#ejemplo_1">Ejemplo</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item" data-level="1"><a class="nav-link" href="#diagrama-er">Diagrama er</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#ejemplo-1">Ejemplo 1</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#ejemplo-2">Ejemplo 2</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#diagrama-journey">Diagrama "journey"</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#diagrama-de-clases">Diagrama de clases</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#diagrama-de-gantt-insertado-a-mermaid">Diagrama de GANTT insertado a mermaid</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#diagrama-git-experimental">Diagrama GIT (experimental)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="tareas-en-curso">Tareas en curso<a class="headerlink" href="#tareas-en-curso" title="Permanent link">#</a></h1>
+<h2 id="web-site-bandera">WEB Site (bandera)<a class="headerlink" href="#web-site-bandera" title="Permanent link">#</a></h2>
+<ul>
+<li>[ ] Mòdulo columnistas que muestre solo tres</li>
+<li>[ ] Buscador de fechas</li>
+<li>[ ] "Ùltimas noticias" solo mostra ultimos 3</li>
+<li>[ ] Albùm de fotografia que sea automàtico</li>
+<li>[ ] Jupiter</li>
+<li>[ ] Saturn</li>
+<li>[ ] Uranus</li>
+<li>[ ] Neptune</li>
+<li>[ ] Comet Haley</li>
+</ul>
+<pre><code class="language-python">def fn():
+    pass
+</code></pre>
+<ul>
+<li>[x] Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+<li>[ ] Vestibulum convallis sit amet nisi a tincidunt<ul>
+<li>[x] In hac habitasse platea dictumst</li>
+<li>[x] In scelerisque nibh non dolor mollis congue sed et metus</li>
+<li>[ ] Praesent sed risus massa</li>
+</ul>
+</li>
+<li>[ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Fenced code blocks are like Standard
+Markdown’s regular code blocks, except that
+they’re not indented and instead rely on
+start and end fence lines to delimit the
+code block.
+</code></pre>
+<h1 id="diagrama-graph-lr">Diagrama Graph LR<a class="headerlink" href="#diagrama-graph-lr" title="Permanent link">#</a></h1>
+<div class="mermaid">graph LR
+    A[Inicio del proceso] -- Enlace texto --&gt; B((Codificacion))
+    A --&gt; C(Round Rect)
+    B --&gt; D{Evalua}
+    C --&gt; D
+    D -- si aplica --&gt; P[Square Rect]
+    D -- no aplica --&gt; E[Square Rect]
+</div>
+<h2 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">#</a></h2>
+<div class="mermaid">flowchart TD
+    A[Inicio] --&gt; B{Es así?}
+    B -- SI --&gt; C[OK]
+    C --&gt; D[Repensar]
+    D --&gt; B
+    B -- No ----&gt; E[Fin]
+</div>
+<hr/>
+<h2 id="diagrama-secuencial">Diagrama secuencial<a class="headerlink" href="#diagrama-secuencial" title="Permanent link">#</a></h2>
+<div class="mermaid">sequenceDiagram
+    participant Elvis
+    participant Alex
+    Elvis-&gt;&gt;Jose: Hola Jose, como estas?
+    loop Visita Medica
+        Jose-&gt;&gt;Jose: Sobreviviendo el coronavirus
+    end
+    Note right of Jose: Actitud racional &lt;br/&gt;prevalece!
+    Jose--&gt;&gt;Elvis: Que bien!
+    Jose-&gt;&gt;Alex: Como estas tu?
+    Alex--&gt;&gt;Jose: Muy bien!
+</div>
+<h2 id="ejemplo_1">Ejemplo<a class="headerlink" href="#ejemplo_1" title="Permanent link">#</a></h2>
+<div class="mermaid">sequenceDiagram
+    participant web as Navegador Web
+    participant blog as Servicio de Blog
+    participant account as Servicio de Contabilidad
+    participant mail as Servicio de correo
+    participant db as Almacenamiento
+
+    Note over web,db: The user must be logged in to submit blog posts
+    web-&gt;&gt;+account: Logs in using credentials
+    account-&gt;&gt;db: Query stored accounts
+    db-&gt;&gt;account: Respond with query result
+
+    alt Credentials not found
+        account-&gt;&gt;web: Invalid credentials
+    else Credentials found
+        account-&gt;&gt;-web: Successfully logged in
+
+        Note over web,db: When the user is authenticated, they can now submit new posts
+        web-&gt;&gt;+blog: Submit new post
+        blog-&gt;&gt;db: Store post data
+
+        par Notifications
+            blog--)mail: Send mail to blog subscribers
+            blog--)db: Store in-site notifications
+        and Response
+            blog--&gt;&gt;-web: Successfully posted
+        end
+    end
+</div>
+<hr/>
+<h1 id="diagrama-er">Diagrama er<a class="headerlink" href="#diagrama-er" title="Permanent link">#</a></h1>
+<div class="mermaid">erDiagram
+    Cliente ||--o{ Pedido : places
+    Pedido ||--|{ Articulos : contains
+    Cliente }|..|{ Direccion-entrega : uses
+</div>
+<h2 id="ejemplo-1">Ejemplo 1<a class="headerlink" href="#ejemplo-1" title="Permanent link">#</a></h2>
+<div class="mermaid">erDiagram
+          CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+          CUSTOMER ||--o{ ORDER : places
+          CUSTOMER ||--o{ INVOICE : "liable for"
+          DELIVERY-ADDRESS ||--o{ ORDER : receives
+          INVOICE ||--|{ ORDER : covers
+          ORDER ||--|{ ORDER-ITEM : includes
+          PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+          PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+</div>
+<h2 id="ejemplo-2">Ejemplo 2<a class="headerlink" href="#ejemplo-2" title="Permanent link">#</a></h2>
+<div class="mermaid">erDiagram
+    CAR ||--o{ NAMED-DRIVER : allows
+    CAR {
+        string allowedDriver FK "The license of the allowed driver"
+        string registrationNumber
+        string make
+        string model
+    }
+    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON {
+        string driversLicense PK "The license #"
+        string firstName
+        string lastName
+        int age
+    }
+</div>
+<hr/>
+<h2 id="diagrama-journey">Diagrama "journey"<a class="headerlink" href="#diagrama-journey" title="Permanent link">#</a></h2>
+<div class="mermaid">journey
+    title Día de trabajo
+    section Viaje al trabajo
+      Preparar el café: 5: José
+      Actualizar las Workstations: 3: José
+      Hacer el trabajo: 1: José, María
+    section Regreso a casa
+      Camino a casa: 3: José
+      Dormir: 5: José
+</div>
+<hr/>
+<h2 id="diagrama-de-clases">Diagrama de clases<a class="headerlink" href="#diagrama-de-clases" title="Permanent link">#</a></h2>
+<div class="mermaid">classDiagram
+Class01 &lt;|-- UnaClassMuyLarga : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --&gt; C2 : Dónde estoy?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int mono
+Class01 : int goríla
+Class08 &lt;--&gt; C2: Rótulo interesante
+</div>
+<hr/>
+<h2 id="diagrama-de-gantt-insertado-a-mermaid">Diagrama de GANTT insertado a mermaid<a class="headerlink" href="#diagrama-de-gantt-insertado-a-mermaid" title="Permanent link">#</a></h2>
+<div class="mermaid">gantt
+dateFormat  DD-MM-YYYY
+title Diagrama de GANTT insertado a mermaid
+excludes weekdays 10-01-2014
+
+section Increíble Proyecto
+Completed tarea            :done,    des1, 05-01-2014,08-01-2014
+Active tarea               :active,  des2, 09-01-2014, 3d
+Future tarea               :         des3, after des2, 5d
+Future tarea2              :         des4, after des3, 5d
+</div>
+<hr/>
+<h2 id="diagrama-git-experimental">Diagrama GIT (experimental)<a class="headerlink" href="#diagrama-git-experimental" title="Permanent link">#</a></h2>
+<div class="mermaid">gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+</div></div>
+</div>
+</div>
+<footer class="col-md-12">
+<p class="powered-by hljs-comment hljs php">
+    Desarrollado con  <span style="color: firebrick;font-size: 150%"><sub> ❤ </sub> </span> y `Software Libre´ · La Paz — Bolivia<br/>
+    Plantilla <a href="https://www.mkdocs.org/user-guide/choosing-your-theme/" rel="noopener" target="_blank">Mkdocs </a> de
+    <a href="https://www.mkdocs.org/" rel="noopener" target="_blank">Mkdocs</a> · Todos los derechos reservados ·
+    <span aria-hidden="true" class="float-right">
+<a class="back-to-top" href="#">
+<span class="button_icon">
+<i class="fas fa-chevron-up fa-2x"></i>
+</span>
+</a>
+</span>
+<br/>
+<span class="powered-by copyright-license-text">
+    Esta obra está bajo una licencia de <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+</span>
+<span class="powered-by footer-license-icons">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" style="background:#C9EEEB;padding-top:2px;padding-right:-2px;padding-bottom:2px;padding-left:5px;border-radius:10px;" target="_blank">
+</a>
+</span>
+<span style="display: inline-flex;
+               margin-right: 8px;
+               height: 22px;
+               vertical-align: text-bottom;">
+<img alt="CC icon" src="https://search.creativecommons.org/static/img/cc_icon.svg"/>
+<img alt="CC by icon" src="https://search.creativecommons.org/static/img/cc-by_icon.svg"/>
+<img alt="CC NC icon" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg"/>
+<img alt="CC SA icon" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg"/>
+</span>
+
+    © 2022
+</p>
+</footer>
+<script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script defer="" src="../js/base.js"></script>
+<script defer="" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script defer="" src="../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script>mermaid.initialize({});</script></body>
+</html>
